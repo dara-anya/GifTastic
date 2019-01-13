@@ -4,34 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Favorite Animals</title>
-
-    <!-- Link CSS Reset and Style Sheets -->
-    <link rel="stylesheet" type="text/css" href= "assets/css/reset.css">
-    <!-- <link rel="stylesheet" type="text/css" href= "assets/css/style.css"> -->
-
+    <title>Document</title>
 </head>
-
 <body>
-    <div id = "buttons">
-        
-    </div>
-
-    <div id = "input-feild">
-        <p>Add an animal</p>
-        <input id = "animal-input" type = "text" placeholder = "Platypus"><br>
-        <input id = "add-animal" type = "submit" value = "Submit">
-    </div>
-
-    <div id = "gifs-appear-here" class = "gif">
-        
-    </div>
+    <div id = "buttons-view"></div>
+    <form id = "animal-form">
+            <label for = "animal-input">Add an animal</label><br>
+            <input type = "text" id = "animal-input"/><br>
+            <input id = "add-animal" type = "submit" value = "Submit"/>
+    </form>
+    <div id = "gifs-appear-here"></div>
+    
 
     <!-- Link to jQuery Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- Link Javascript -->
     <script src = "assets/javascript/app.js"></script>  
-
 </body>
 </html>
