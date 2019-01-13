@@ -66,13 +66,43 @@ function renderGif(){
                 gifDiv.prepend(p);
                 gifDiv.prepend(gifImage);
                 $("#gifs-appear-here").prepend(gifDiv);
+
+                /* THE FOLLOWING CODE IS TO BE USED IN STEP FOUR: PAUSE/PLAY GIFS*/
+                // Add a gif class for each image
+                gifImage.addClass("gif");
+                // Create a variable to store the still and animated URL of each gif
+                var still = results[i].images.fixed_height_still.url;
+                var animated = results[i].images.fixed_height.url;
+                // Create data attributes to store the still and animated URL of each gif
+                gifImage.attr("data-still", still);
+                gifImage.attr("data-animate", animated);
+                // Create a data atribute to identify the gif state that is displayed (still or animated)
+                gifImage.attr("data-state", "animated");
             }
-            
+
+            // STEP FOUR: Pause/Play gifs
+            $(".gif").on("click", function(){
+              // Create a variable to store the state of the gif
+              var state = $(this).attr("data-state");
+              console.log(state);
+              // If the state of the gif is animated
+              if (state === "animated"){
+                // Update the animated URL source to the still URL (data-still)
+                $(this).attr("src", $(this).attr("data-still"));
+                // Update the data-state to still
+                $(this).attr("data-state", "still");
+              }
+              // If the state of the gif is still
+              if (state === "still"){
+                // Update the still URL source to the animated URL (data-animate)
+                $(this).attr("src", $(this).attr("data-animate"));
+                // Update the data-state to animated
+                $(this).attr("data-state", "animated");
+              }
+            })
             console.log(response);
         });
     });
 }
 // Call renderGif to link initial buttons to Giphy API
 renderGif();
-
-// STEP FOUR: Pause/Play Gifs
