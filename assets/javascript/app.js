@@ -61,7 +61,7 @@ function renderGif(){
                 // Create an img tag to store the each gif
                 var gifImage = $("<img>");
                 // Create a source attribute for each gifImage with the value equal to the gif's URL
-                gifImage.attr("src", results[i].images.fixed_height.url);
+                gifImage.attr("src", results[i].images.fixed_height_still.url);
                 // Prepend the rating and gif to the HTML
                 gifDiv.prepend(p);
                 gifDiv.prepend(gifImage);

@@ -12,3 +12,5 @@ HOW TO USE THE WEBSITE
     6) Click on any of the gifs to PLAY/PAUSE the gif.
     7) The number of topics you can submit is unlimited.
     8) The website is populated with a few topic buttons by default.
+    
+    Notice: Double-click the static image when the gifs first load in.
