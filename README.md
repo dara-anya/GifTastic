@@ -14,3 +14,8 @@ HOW TO USE THE WEBSITE
     8) The website is populated with a few topic buttons by default.
     
     Notice: Double-click the static image when the gifs first load in.
+    
+
+EJOY!
+
+https://dara-anya.github.io/GifTastic/
